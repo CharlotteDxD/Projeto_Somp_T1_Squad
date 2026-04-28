@@ -29,3 +29,37 @@ sompo-predict-v15/
 │
 ├── .gitignore                  # Arquivos ignorados pelo Git (MUITO IMPORTANTE)
 └── README.md                   # A porta de entrada do projeto
+
+# 🚜 Sompo Predict v15 - Cérebro Digital da Prevenção Agrícola
+
+O **Sompo Predict v15** é um ecossistema completo de IoT e Inteligência Artificial desenvolvido pelo **Squad T1** para a Sompo Seguros. Nosso objetivo é transformar o seguro de maquinário agrícola de um modelo *reativo* para *preventivo*, antecipando falhas mecânicas e mitigando o risco de acidentes severos (como tombamentos) no campo.
+
+## 👥 Squad T1
+* **Rafael:** Scrum Master & ML Specialist
+* **Gustavo:** Cloud Architect (AWS & Deep Learning)
+* **Anthony:** IoT Engineer (C++, ESP32 & Sensores)
+* **Guilherme:** Data Scientist (EDA, Base SUSEP & INMET)
+* **Charles:** Backend Developer & Cyber Security
+
+## 🏗️ Arquitetura da Solução
+Nossa solução é dividida em 3 pilares principais:
+1. **Edge/IoT (Campo):** Microcontroladores ESP32 processando telemetria em tempo real com sensores inerciais MPU-6050 para detecção de anomalias com latência inferior a 2 segundos [1, 2].
+2. **Data Science & AI (Inteligência):** Modelos XGBoost calibrados com dados reais da SUSEP (S_RURAL) e do INMET. Utilizamos a biblioteca **SHAP** para garantir total explicabilidade (XAI) do Score de Risco para os subscritores [3-5].
+3. **Cloud & SecDevOps (Nuvem):** Backend hospedado em AWS EC2, com comunicação segura via TLS 1.3, autenticação JWT, e auditoria criptográfica de logs baseada em hashes **SHA-256** (nossa Caixa-Preta imutável) [6].
+
+## 🚀 Como Executar o Projeto Localmente
+### Pré-requisitos:
+- Python 3.9+
+- Docker (Opcional, para subir o banco de dados)
+- PlatformIO (Para compilar o código do ESP32)
+
+### Passo a Passo (Backend & IA):
+1. Clone o repositório:
+   `git clone https://github.com/SeuUsuario/sompo-predict-v15.git`
+2. Acesse a pasta do backend:
+   `cd sompo-predict-v15/backend_api`
+3. Instale as dependências:
+   `pip install -r requirements.txt`
+4. Execute a aplicação (exemplo em FastAPI):
+   `uvicorn app.main:app --reload`
+
