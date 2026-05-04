@@ -102,7 +102,7 @@ def render_modo_demo():
     Pagina de modo demo. Quando ativada, percorre o menu sozinho com timers,
     exibindo o roteiro do pitch para o apresentador.
     """
-    from app import gerar_trilha_auditoria, _header
+    from core_app import gerar_trilha_auditoria, _header
 
     _header(
         "Modo Demo Automatico",
@@ -243,7 +243,7 @@ def render_sobre():
     """
     Pagina 'Sobre' com pitch deck embutido + creditos + status do squad.
     """
-    from app import gerar_trilha_auditoria
+    from core_app import gerar_trilha_auditoria
     gerar_trilha_auditoria("ACESSO_SOBRE", "pagina=sobre")
 
     # Hero
