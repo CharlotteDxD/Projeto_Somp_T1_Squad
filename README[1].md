@@ -3,6 +3,8 @@
 Prototipo funcional simulado para o desafio FIAP × Sompo Seguros 2026.
 **Squad T1** · Scrum Master: Rafael (Gon) · Devs: Charles, Anthony, Guilherme, Gustavo.
 
+> **Sompo Predict reduz sinistros agrícolas detectando padrões de risco em tempo real.**
+
 ---
 
 ## Stack
