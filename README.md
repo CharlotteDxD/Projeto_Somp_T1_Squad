@@ -1,65 +1,42 @@
-sompo-predict-v15/
-│
-├── docs/                       # Documentação do Projeto (Rafael e Charles)
-│   ├── arquitetura_uml.png     # Diagramas de Implantação, Classes e Casos de Uso
-│   ├── pitch_sompo.pdf         # Apresentação executiva
-│   └── user_stories.md         # Detalhamento das 8 User Stories do projeto
-│
-├── edge_iot/                   # Código Embarcado / Hardware (Anthony)
-│   ├── src/                    # Scripts em C/C++ para o ESP32
-│   │   ├── main.cpp            # Lógica principal de controle
-│   │   ├── mpu6050_sensor.cpp  # Leitura dos eixos X, Y, Z (Acelerômetro/Giroscópio)
-│   │   └── mqtt_client.cpp     # Envio seguro dos dados via MQTT
-│   └── platformio.ini          # Configurações de build e bibliotecas do ESP32
-│
-├── data_science/               # IA e Engenharia de Dados (Guilherme e Rafael)
-│   ├── notebooks/              # Jupyter Notebooks (.ipynb)
-│   │   ├── 01_eda_susep.ipynb  # Análise Exploratória da base real da SUSEP
-│   │   ├── 02_inmet_clima.ipynb# Integração e Feature Engineering com clima
-│   │   └── 03_xgboost_shap.ipynb # Treinamento do modelo de risco e explicabilidade
-│   └── models/                 # Modelos exportados (.pkl, .tflite para o Edge)
-│
-├── backend_api/                # Nuvem AWS, API e Segurança (Gustavo e Charles)
-│   ├── app/
-│   │   ├── main.py             # Rotas da API (Flask ou FastAPI)
-│   │   ├── auth.py             # Controle de acesso com tokens JWT
-│   │   └── audit_log.py        # Caixa-preta: Geração de Hashes SHA-256 para logs
-│   ├── Dockerfile              # Containerização para deploy na AWS EC2
-│   └── requirements.txt        # Dependências Python (Pandas, XGBoost, SHAP, Flask)
-│
-├── .gitignore                  # Arquivos ignorados pelo Git (MUITO IMPORTANTE)
-└── README.md                   # A porta de entrada do projeto
+# Sompo Predict
 
-# 🚜 Sompo Predict v15 - Cérebro Digital da Prevenção Agrícola
+Plataforma de prevenção de risco em seguro rural, desenvolvida pelo Squad T1
+no desafio Sompo Seguros · FIAP. Um ESP32 instalado no equipamento agrícola
+mede inclinação, vibração e obstáculo à frente. O serviço cruza essas
+leituras com o histórico da apólice e entrega o resultado a dois públicos:
+o produtor vê o estado da máquina em tempo real, e a seguradora recebe a
+carteira ordenada por exposição.
 
-O **Sompo Predict v15** é um ecossistema completo de IoT e Inteligência Artificial desenvolvido pelo **Squad T1** para a Sompo Seguros. Nosso objetivo é transformar o seguro de maquinário agrícola de um modelo *reativo* para *preventivo*, antecipando falhas mecânicas e mitigando o risco de acidentes severos (como tombamentos) no campo.
+## Onde está cada coisa
 
-## 👥 Squad T1
-* **Rafael:** Scrum Master & ML Specialist
-* **Gustavo:** Cloud Architect (AWS & Deep Learning)
-* **Anthony:** IoT Engineer (C++, ESP32 & Sensores)
-* **Guilherme:** Data Scientist (EDA, Base SUSEP & INMET)
-* **Charles:** Backend Developer & Cyber Security
+| Pasta | Conteúdo |
+|---|---|
+| [`Sprint4/`](Sprint4/) | **Versão atual.** Dois portais (seguradora e segurado), sensor integrado em tempo real, firmware, serviço de ingestão, publicação em AWS, avaliação de modelos sobre a base real. Comece pelo [README da Sprint 4](Sprint4/README.md). |
+| [`Sprint3/`](Sprint3/) | Entrega da Sprint 3, mantida como histórico. |
+| `data_science/notebooks/sprint 2/` | Notebooks de pré-processamento e baseline de ML da Sprint 2. |
+| Arquivos na raiz | Painel e páginas das Sprints 1 e 2. Não são mais mantidos; a evolução está em `Sprint3/` e `Sprint4/`. |
 
-## 🏗️ Arquitetura da Solução
-Nossa solução é dividida em 3 pilares principais:
-1. **Edge/IoT (Campo):** Microcontroladores ESP32 processando telemetria em tempo real com sensores inerciais MPU-6050 para detecção de anomalias com latência inferior a 2 segundos [1, 2].
-2. **Data Science & AI (Inteligência):** Modelos XGBoost calibrados com dados reais da SUSEP (S_RURAL) e do INMET. Utilizamos a biblioteca **SHAP** para garantir total explicabilidade (XAI) do Score de Risco para os subscritores [3-5].
-3. **Cloud & SecDevOps (Nuvem):** Backend hospedado em AWS EC2, com comunicação segura via TLS 1.3, autenticação JWT, e auditoria criptográfica de logs baseada em hashes **SHA-256** (nossa Caixa-Preta imutável) [6].
+## Como executar a versão atual
 
-## 🚀 Como Executar o Projeto Localmente
-### Pré-requisitos:
-- Python 3.9+
-- Docker (Opcional, para subir o banco de dados)
-- PlatformIO (Para compilar o código do ESP32)
+```bash
+cd Sprint4
+pip install -r requirements.txt
+python iniciar_portais.py
+```
 
-### Passo a Passo (Backend & IA):
-1. Clone o repositório:
-   `git clone https://github.com/SeuUsuario/sompo-predict-v15.git`
-2. Acesse a pasta do backend:
-   `cd sompo-predict-v15/backend_api`
-3. Instale as dependências:
-   `pip install -r requirements.txt`
-4. Execute a aplicação (exemplo em FastAPI):
-   `uvicorn app.main:app --reload`
+Portal da Seguradora em http://localhost:8501 e Portal do Segurado em
+http://localhost:8502. Integração com o dispositivo e publicação na nuvem
+estão descritas em [`Sprint4/INTEGRACAO.md`](Sprint4/INTEGRACAO.md) e
+[`Sprint4/deploy/README_AWS.md`](Sprint4/deploy/README_AWS.md).
 
+## Equipe
+
+* **Rafael:** Scrum Master e ML
+* **Gustavo:** nuvem (AWS) e deep learning
+* **Anthony:** IoT (C++, ESP32 e sensores)
+* **Guilherme:** ciência de dados (base SUSEP e INMET)
+* **Charles:** backend e segurança
+
+## Licença
+
+Apache 2.0. Ver [LICENSE](LICENSE).

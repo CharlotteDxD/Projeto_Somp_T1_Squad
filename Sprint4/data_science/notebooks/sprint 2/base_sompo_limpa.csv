@@ -1,0 +1,150 @@
+UF,RAMO_SUSEP,CLASSIFICACAO_RISCO,INTENSIDADE_SINISTRO,IDADE_MAQUINA_ANOS,ACESSORIOS_SEGURADOS,PREMIO_LIQUIDO_BRL,VALOR_INDENIZADO_BRL
+GO,0622 - Penhor Rural,Baixo,Grave,7,5,413436.65,481324.21
+MS,0621 - Agrícola,Alto,Leve,4,8,90460.08,417990.06
+SP,0622 - Penhor Rural,Crítico,Moderado,13,1,630594.31,347987.1
+MT,0621 - Agrícola,Baixo,Grave,11,4,257565.55,204476.47
+MG,0631 - Benfeitorias,Baixo,Grave,8,11,160225.92,86647.16
+MS,0621 - Agrícola,Alto,Leve,13,2,54561.98,78218.52
+MT,0621 - Agrícola,Alto,Grave,5,3,453397.38,125121.45
+MT,0635 - Florestas,Baixo,Leve,7,9,516234.16,274613.33
+BA,0622 - Penhor Rural,Baixo,Grave,10,5,37026.18,357297.96
+MT,0621 - Agrícola,Baixo,Leve,3,11,396267.47,330098.69
+SP,0621 - Agrícola,Médio,Leve,7,7,189209.44,139966.95
+GO,0635 - Florestas,Médio,Grave,11,0,492750.27,477432.64
+SP,0635 - Florestas,Baixo,Leve,11,9,151415.66,368948.46
+PR,0622 - Penhor Rural,Médio,Leve,8,7,525929.86,277177.03
+MS,0635 - Florestas,Alto,Grave,5,10,305383.13,305860.37
+GO,0631 - Benfeitorias,Baixo,Grave,4,6,704129.24,209800.03
+BA,0635 - Florestas,Baixo,Moderado,8,0,124702.68,123865.49
+GO,0631 - Benfeitorias,Alto,Moderado,8,1,272273.1,177986.34
+GO,0622 - Penhor Rural,Alto,Moderado,3,2,107268.3,378923.06
+MG,0622 - Penhor Rural,Médio,Leve,6,0,695402.87,7196.74
+GO,0622 - Penhor Rural,Médio,Leve,5,8,661071.03,58036.32
+BA,0622 - Penhor Rural,Baixo,Leve,2,7,212007.68,23001.32
+SP,0622 - Penhor Rural,Médio,Total,8,1,503488.43,20364.4
+GO,0631 - Benfeitorias,Médio,Moderado,12,8,617486.1,427730.29
+RS,0631 - Benfeitorias,Baixo,Leve,14,6,427520.59,351828.93
+GO,0635 - Florestas,Baixo,Total,2,5,200342.91,48917.08
+MS,0621 - Agrícola,Baixo,Leve,12,5,92499.51,245807.94
+RS,0622 - Penhor Rural,Baixo,Moderado,5,10,675481.42,236735.89
+RS,0635 - Florestas,Baixo,Moderado,1,3,677803.09,86600.93
+MS,0621 - Agrícola,Baixo,Moderado,12,9,483998.56,216925.82
+MT,0622 - Penhor Rural,Baixo,Leve,10,9,270796.6,199252.37
+PR,0622 - Penhor Rural,Alto,Grave,6,1,278176.94,307925.05
+MG,0631 - Benfeitorias,Médio,Total,13,6,551317.87,317546.83
+MT,0621 - Agrícola,Médio,Moderado,12,4,675404.94,22652.0
+MT,0621 - Agrícola,Alto,Moderado,9,10,668137.66,187306.31
+SP,0635 - Florestas,Médio,Total,1,5,590409.77,312929.96
+MG,0631 - Benfeitorias,Baixo,Grave,11,1,490472.94,251568.13
+MG,0631 - Benfeitorias,Médio,Leve,11,4,86001.47,428244.92
+MT,0631 - Benfeitorias,Médio,Moderado,10,9,142180.82,329346.82
+GO,0631 - Benfeitorias,Alto,Moderado,12,3,676451.79,81467.21
+SP,0621 - Agrícola,Médio,Leve,12,8,464661.07,35284.37
+SP,0621 - Agrícola,Baixo,Grave,14,5,31667.86,321209.64
+RS,0622 - Penhor Rural,Baixo,Total,14,1,98566.87,13255.66
+BA,0622 - Penhor Rural,Baixo,Total,14,0,506038.78,292887.79
+MG,0631 - Benfeitorias,Médio,Leve,3,4,28669.65,470115.12
+MT,0631 - Benfeitorias,Médio,Leve,12,8,141585.84,287737.09
+RS,0631 - Benfeitorias,Baixo,Total,7,5,422832.0,194084.96
+MS,0622 - Penhor Rural,Crítico,Grave,4,9,526624.02,321644.11
+PR,0635 - Florestas,Médio,Leve,9,11,497671.91,229126.45
+BA,0635 - Florestas,Baixo,Total,3,6,187595.25,272808.39
+BA,0622 - Penhor Rural,Baixo,Grave,5,4,541329.94,470732.4
+BA,0622 - Penhor Rural,Baixo,Moderado,3,9,197005.59,193051.32
+SP,0622 - Penhor Rural,Baixo,Moderado,7,5,260914.78,480595.28
+MS,0622 - Penhor Rural,Baixo,Leve,5,4,566206.27,452675.32
+BA,0622 - Penhor Rural,Baixo,Leve,9,10,495983.85,97895.57
+MS,0622 - Penhor Rural,Baixo,Leve,7,8,640686.97,34680.65
+GO,0631 - Benfeitorias,Baixo,Grave,2,5,501769.35,50389.0
+BA,0631 - Benfeitorias,Alto,Leve,4,10,437023.74,9110.91
+PR,0631 - Benfeitorias,Baixo,Leve,9,7,92914.21,47221.48
+MS,0631 - Benfeitorias,Médio,Leve,12,1,291593.96,341503.39
+MS,0622 - Penhor Rural,Médio,Moderado,14,11,217271.72,35594.32
+PR,0635 - Florestas,Crítico,Total,2,8,201892.49,159487.82
+BA,0621 - Agrícola,Baixo,Leve,10,4,730432.65,422437.66
+PR,0622 - Penhor Rural,Baixo,Leve,9,6,309995.85,11635.97
+MS,0621 - Agrícola,Crítico,Grave,10,9,671733.75,407234.24
+PR,0635 - Florestas,Alto,Leve,5,0,482575.5,140927.39
+MS,0631 - Benfeitorias,Alto,Leve,2,9,601238.2,59082.41
+MS,0635 - Florestas,Baixo,Leve,4,4,389411.89,348368.58
+GO,0622 - Penhor Rural,Baixo,Leve,12,11,443255.32,314471.42
+MT,0631 - Benfeitorias,Médio,Leve,12,9,382075.33,438736.01
+MS,0622 - Penhor Rural,Crítico,Leve,7,1,166551.17,367535.52
+BA,0631 - Benfeitorias,Médio,Leve,12,11,548777.78,401740.47
+RS,0621 - Agrícola,Médio,Total,13,5,228559.96,141017.29
+SP,0621 - Agrícola,Baixo,Leve,8,10,42629.08,88719.77
+MG,0621 - Agrícola,Alto,Moderado,3,0,492967.41,375307.38
+MT,0635 - Florestas,Baixo,Moderado,14,2,153405.24,403417.37
+MT,0622 - Penhor Rural,Baixo,Leve,1,4,706832.47,495252.57
+MT,0635 - Florestas,Médio,Moderado,4,3,716598.22,206308.84
+GO,0621 - Agrícola,Médio,Leve,2,2,688276.68,186009.04
+MS,0622 - Penhor Rural,Baixo,Total,8,9,293365.06,388206.48
+GO,0621 - Agrícola,Baixo,Leve,4,4,36206.05,170401.77
+MS,0635 - Florestas,Médio,Leve,2,10,698030.96,465378.66
+BA,0635 - Florestas,Baixo,Leve,14,7,335433.51,429206.38
+GO,0635 - Florestas,Médio,Total,6,10,725824.74,214497.01
+GO,0621 - Agrícola,Baixo,Moderado,6,3,723624.48,375435.53
+SP,0622 - Penhor Rural,Médio,Moderado,10,0,643431.86,377271.44
+RS,0622 - Penhor Rural,Médio,Leve,4,10,238475.45,51561.93
+GO,0621 - Agrícola,Crítico,Grave,6,6,500.0,451276.45
+SP,0622 - Penhor Rural,Baixo,Leve,13,7,642074.09,252626.19
+PR,0621 - Agrícola,Baixo,Grave,2,2,254768.45,413228.73
+RS,0622 - Penhor Rural,Baixo,Leve,10,5,147882.24,160024.8
+BA,0631 - Benfeitorias,Crítico,Leve,12,1,428680.92,447761.61
+GO,0631 - Benfeitorias,Baixo,Leve,2,6,703712.21,194600.84
+MG,0635 - Florestas,Alto,Leve,10,7,529621.6,5418.83
+MT,0631 - Benfeitorias,Baixo,Moderado,14,5,438294.35,452690.99
+PR,0631 - Benfeitorias,Médio,Leve,4,5,95452.96,45643.34
+PR,0631 - Benfeitorias,Alto,Grave,14,4,470880.24,159656.82
+BA,0621 - Agrícola,Médio,Leve,8,7,742789.04,475030.98
+SP,0631 - Benfeitorias,Médio,Moderado,14,0,126560.91,475303.57
+PR,0631 - Benfeitorias,Médio,Leve,7,9,400789.0,286718.94
+RS,0635 - Florestas,Baixo,Leve,12,3,661095.48,315918.61
+GO,0631 - Benfeitorias,Crítico,Moderado,9,3,562057.25,224222.76
+GO,0631 - Benfeitorias,Alto,Leve,14,2,530336.41,146605.39
+MG,0622 - Penhor Rural,Crítico,Leve,8,2,534300.96,164332.27
+BA,0635 - Florestas,Baixo,Grave,5,3,285631.08,336259.23
+MT,0635 - Florestas,Alto,Total,13,10,237854.09,376187.26
+SP,0635 - Florestas,Crítico,Leve,2,0,611786.84,395789.52
+MT,0635 - Florestas,Baixo,Leve,5,10,612332.21,394809.07
+PR,0635 - Florestas,Baixo,Moderado,8,10,653627.43,45603.05
+BA,0635 - Florestas,Alto,Leve,10,1,687099.4,247210.15
+MG,0621 - Agrícola,Médio,Leve,9,8,395723.24,28779.38
+MT,0631 - Benfeitorias,Alto,Leve,12,9,388599.31,274764.44
+RS,0635 - Florestas,Baixo,Grave,12,1,603764.0,220765.25
+GO,0631 - Benfeitorias,Alto,Moderado,12,4,496223.85,443852.09
+PR,0631 - Benfeitorias,Baixo,Leve,13,8,533925.99,175457.51
+MG,0621 - Agrícola,Baixo,Leve,9,8,601949.69,58533.51
+MT,0635 - Florestas,Baixo,Leve,13,7,670253.87,71495.84
+SP,0622 - Penhor Rural,Alto,Moderado,13,0,270046.49,380755.32
+RS,0621 - Agrícola,Médio,Leve,1,0,297297.64,309109.03
+RS,0622 - Penhor Rural,Médio,Leve,9,8,93136.91,50561.34
+MT,0631 - Benfeitorias,Baixo,Grave,7,10,444253.1,42053.4
+GO,0631 - Benfeitorias,Alto,Leve,9,7,51058.15,350484.57
+MT,0621 - Agrícola,Baixo,Moderado,8,9,362558.56,36381.5
+PR,0621 - Agrícola,Alto,Leve,1,8,418417.36,410930.03
+MT,0622 - Penhor Rural,Médio,Leve,12,6,232742.41,353121.11
+RS,0635 - Florestas,Baixo,Leve,8,2,453354.11,40674.39
+MG,0622 - Penhor Rural,Médio,Grave,8,2,47112.68,42418.86
+MT,0621 - Agrícola,Baixo,Grave,11,1,52077.44,493319.79
+GO,0622 - Penhor Rural,Alto,Grave,3,4,621385.41,187135.4
+BA,0621 - Agrícola,Médio,Leve,1,11,286138.22,185321.07
+MG,0622 - Penhor Rural,Baixo,Moderado,8,11,117118.87,406399.78
+SP,0621 - Agrícola,Alto,Leve,3,2,403626.36,473624.29
+MS,0621 - Agrícola,Baixo,Leve,3,5,583245.33,493000.53
+MT,0621 - Agrícola,Médio,Grave,1,1,181470.24,376689.09
+GO,0635 - Florestas,Crítico,Leve,11,11,476595.59,188129.79
+MG,0622 - Penhor Rural,Médio,Leve,5,2,86876.91,41750.36
+GO,0622 - Penhor Rural,Baixo,Leve,10,4,62469.25,388573.46
+SP,0622 - Penhor Rural,Crítico,Leve,7,11,410232.11,279202.12
+RS,0621 - Agrícola,Médio,Leve,10,10,416960.46,212111.0
+GO,0622 - Penhor Rural,Baixo,Moderado,9,10,487136.68,453177.19
+MG,0622 - Penhor Rural,Baixo,Leve,12,0,551416.22,55598.74
+GO,0621 - Agrícola,Alto,Grave,7,0,732492.76,246312.55
+GO,0631 - Benfeitorias,Médio,Grave,9,9,399317.75,5676.82
+GO,0621 - Agrícola,Médio,Leve,8,8,259143.44,234330.32
+PR,0622 - Penhor Rural,Alto,Leve,12,6,601509.99,28151.64
+PR,0621 - Agrícola,Alto,Leve,2,0,221353.38,59408.96
+RS,0631 - Benfeitorias,Baixo,Moderado,1,11,343254.28,58763.12
+MT,0621 - Agrícola,Baixo,Leve,7,7,81880.88,324605.15
+GO,0622 - Penhor Rural,Baixo,Moderado,7,2,43379.29,373022.44

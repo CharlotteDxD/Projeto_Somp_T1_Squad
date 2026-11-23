@@ -1,0 +1,55 @@
+# /etc/systemd/system/sompo-api.service
+#
+# Servico de ingestao de telemetria — Sompo Predict
+#
+#   sudo cp deploy/sompo-api.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now sompo-api
+#   sudo systemctl status sompo-api
+#   journalctl -u sompo-api -f          # acompanhar em tempo real
+
+[Unit]
+Description=Sompo Predict - servico de ingestao de telemetria
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/sompo-predict
+
+# Chaves e configuracao ficam FORA do repositorio.
+# Ver deploy/sompo-api.env.exemplo
+EnvironmentFile=/etc/sompo-predict.env
+
+# --workers 1 e obrigatorio: o servico mantem estado em memoria e varios
+# processos teriam copias divergentes. Ver o cabecalho de wsgi.py.
+ExecStart=/opt/sompo-predict/.venv/bin/gunicorn \
+    --workers 1 \
+    --threads 8 \
+    --bind 0.0.0.0:${PORT} \
+    --timeout 30 \
+    --access-logfile - \
+    --error-logfile - \
+    wsgi:app
+
+Restart=always
+RestartSec=5
+
+# Permite escutar na porta 80 sem rodar como root
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+
+# Endurecimento basico: o processo nao precisa de mais nada alem da
+# propria pasta de trabalho.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=read-only
+ReadWritePaths=/opt/sompo-predict
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=sompo-api
+
+[Install]
+WantedBy=multi-user.target
