@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Sprint 4: configuracao com chave do dispositivo e do servico (nunca versionar)
+config.h
+sompo-api.env
+*.pem
