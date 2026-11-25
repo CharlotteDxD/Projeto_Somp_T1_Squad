@@ -1,0 +1,150 @@
+{
+  "gerado_em": "2026-09-09T20:12:33",
+  "base": {
+    "registros": 150,
+    "features": 7,
+    "treino": 105,
+    "teste": 45
+  },
+  "baseline_ingenuo": 0.733,
+  "xgboost": {
+    "accuracy": {
+      "acuracia": 0.733,
+      "f1_macro": 0.212,
+      "melhores_parametros": {
+        "subsample": 0.7,
+        "n_estimators": 100,
+        "min_child_weight": 5,
+        "max_depth": 5,
+        "learning_rate": 0.01
+      },
+      "classes_previstas": [
+        0
+      ],
+      "distribuicao_previsoes": {
+        "Baixo": 45
+      },
+      "recall_por_classe": {
+        "Baixo": 1.0,
+        "Médio": 0.0,
+        "Alto": 0.0,
+        "Crítico": 0.0
+      },
+      "matriz_confusao": [
+        [
+          33,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "f1_macro": {
+      "acuracia": 0.689,
+      "f1_macro": 0.367,
+      "melhores_parametros": {
+        "subsample": 0.85,
+        "n_estimators": 200,
+        "min_child_weight": 3,
+        "max_depth": 5,
+        "learning_rate": 0.1
+      },
+      "classes_previstas": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "distribuicao_previsoes": {
+        "Baixo": 38,
+        "Médio": 4,
+        "Alto": 2,
+        "Crítico": 1
+      },
+      "recall_por_classe": {
+        "Baixo": 0.879,
+        "Médio": 0.25,
+        "Alto": 0.0,
+        "Crítico": 0.25
+      },
+      "matriz_confusao": [
+        [
+          29,
+          2,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "referencia_sprint2": {
+    "decision_tree": 0.267,
+    "mlp": 0.422
+  },
+  "importancias": [
+    {
+      "feature": "DURACAO_APOLICE_DIAS",
+      "peso": 0.1881
+    },
+    {
+      "feature": "QTD_COBERTURAS_CONTRATADAS",
+      "peso": 0.1562
+    },
+    {
+      "feature": "PREMIO_LIQUIDO_BRL",
+      "peso": 0.1489
+    },
+    {
+      "feature": "MODALIDADE_SUSEP_Penhor Rural (financiamento)",
+      "peso": 0.1408
+    },
+    {
+      "feature": "UF_MT",
+      "peso": 0.1313
+    },
+    {
+      "feature": "UF_MS",
+      "peso": 0.1186
+    },
+    {
+      "feature": "MODALIDADE_SUSEP_Compreensivo Rural (financiamento)",
+      "peso": 0.1161
+    }
+  ]
+}
