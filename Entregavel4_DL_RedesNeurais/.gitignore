@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+.pytest_cache/
+video/audio/
+video/clipes/
+video/png/

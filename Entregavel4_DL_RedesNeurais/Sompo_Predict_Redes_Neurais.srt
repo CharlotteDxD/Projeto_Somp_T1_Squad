@@ -1,0 +1,223 @@
+1
+00:00:00,000 --> 00:00:02,423
+Oi, eu sou o Rafael, do grupo T1.
+
+2
+00:00:02,423 --> 00:00:06,978
+Neste vídeo mostro onde usamos redes neurais no Sompo Predict,
+
+3
+00:00:06,978 --> 00:00:09,622
+a solução que montamos para a Sompo.
+
+4
+00:00:09,622 --> 00:00:12,193
+O problema é o de sempre em seguro:
+
+5
+00:00:12,193 --> 00:00:19,391
+a Sompo só fica sabendo que um equipamento agrícola corria risco quando o aviso de sinistro chega.
+
+6
+00:00:19,391 --> 00:00:25,341
+Os dados que temos para ensinar uma rede são poucos, 150 apólices reais da SUSEP,
+
+7
+00:00:25,341 --> 00:00:27,618
+e foi com elas que trabalhamos.
+
+8
+00:00:28,318 --> 00:00:31,481
+Na Sprint 1 propusemos uma rede híbrida,
+
+9
+00:00:31,481 --> 00:00:36,305
+um MLP para o perfil da apólice e uma LSTM para a telemetria.
+
+10
+00:00:36,305 --> 00:00:41,999
+A LSTM ficou no papel, porque a base não tem série temporal por máquina.
+
+11
+00:00:41,999 --> 00:00:44,371
+O MLP foi treinado de verdade.
+
+12
+00:00:44,371 --> 00:00:51,805
+Na Sprint 2 ele nasceu em Keras, com duas camadas escondidas, de 32 e 16 neurônios, e dropout.
+
+13
+00:00:51,805 --> 00:00:57,499
+Na Sprint 3 testamos regularização, parada antecipada e peso por classe.
+
+14
+00:00:57,499 --> 00:01:02,006
+Na Sprint 4, com a base refeita direto da fonte da SUSEP,
+
+15
+00:01:02,006 --> 00:01:06,989
+ele entrou numa validação cruzada junto com mais cinco modelos.
+
+16
+00:01:07,689 --> 00:01:12,412
+Na solução, a rede fica ao lado do sistema e não decide nada.
+
+17
+00:01:12,412 --> 00:01:19,303
+O score que o produtor e a seguradora enxergam vem de um motor de regras em duas camadas.
+
+18
+00:01:19,303 --> 00:01:22,400
+Por cima dele há uma regra de segurança:
+
+19
+00:01:22,400 --> 00:01:29,136
+inclinação acima de 25 graus, ou obstáculo a menos de 35 centímetros, força o vermelho.
+
+20
+00:01:29,136 --> 00:01:34,634
+O MLP roda como experimento e aparece no aplicativo só para comparação.
+
+21
+00:01:34,634 --> 00:01:36,337
+Foi uma escolha nossa.
+
+22
+00:01:36,337 --> 00:01:42,532
+O motor de regras dá para auditar, e a rede ainda não provou que merece decidir.
+
+23
+00:01:43,232 --> 00:01:47,757
+O resultado, em cinquenta partições de validação cruzada:
+
+24
+00:01:47,757 --> 00:01:51,250
+o MLP fez ROC-AUC de 0,61 e o sorteio, 0,55.
+
+25
+00:01:51,250 --> 00:01:54,505
+A diferença é menor que um desvio-padrão,
+
+26
+00:01:54,505 --> 00:01:58,950
+então não dá para afirmar que a rede aprendeu um padrão.
+
+27
+00:01:58,950 --> 00:02:03,317
+A árvore, a floresta e o XGBoost ficaram no mesmo teto.
+
+28
+00:02:03,317 --> 00:02:09,429
+A contribuição da rede neural foi ajudar a mostrar que o limite está no dado:
+
+29
+00:02:09,429 --> 00:02:13,240
+são 14 casos críticos, pouco para qualquer rede.
+
+30
+00:02:13,240 --> 00:02:19,909
+Para a Sompo isso aponta o investimento certo, mais apólices e telemetria acumulada,
+
+31
+00:02:19,909 --> 00:02:21,973
+em vez de outro algoritmo.
+
+32
+00:02:22,673 --> 00:02:24,087
+Vejo três caminhos.
+
+33
+00:02:24,087 --> 00:02:26,022
+O primeiro é a telemetria.
+
+34
+00:02:26,022 --> 00:02:31,380
+O ESP32 já manda inclinação, vibração, obstáculo, temperatura e umidade.
+
+35
+00:02:31,380 --> 00:02:32,422
+Com histórico,
+
+36
+00:02:32,422 --> 00:02:39,715
+uma LSTM ou um autoencoder aprende como é uma operação normal e avisa quando a máquina foge disso,
+
+37
+00:02:39,715 --> 00:02:43,139
+antes de qualquer limite da regra ser cruzado.
+
+38
+00:02:43,139 --> 00:02:51,548
+O segundo é usar esses mesmos pares de leitura e sinistro para aprender os pesos da camada de exposição do score,
+
+39
+00:02:51,548 --> 00:02:54,748
+que hoje vêm de julgamento de especialista.
+
+40
+00:02:54,748 --> 00:03:01,818
+O terceiro são imagens de drone ou de satélite, com uma CNN pré-treinada, em transfer learning,
+
+41
+00:03:01,818 --> 00:03:07,549
+para enxergar água, erosão e declive do terreno antes de a máquina chegar lá.
+
+42
+00:03:08,249 --> 00:03:14,811
+Para mostrar a ideia sem prometer o que ainda não temos, fiz uma prova de conceito.
+
+43
+00:03:14,811 --> 00:03:15,444
+Atenção:
+
+44
+00:03:15,444 --> 00:03:20,662
+os dados são simulados, porque não existe histórico de telemetria.
+
+45
+00:03:20,662 --> 00:03:25,169
+Treinei um autoencoder só com janelas de operação normal.
+
+46
+00:03:25,169 --> 00:03:31,731
+Na rampa, o erro da rede passa do limite na amostra 37, e a regra só dispara na 55.
+
+47
+00:03:31,731 --> 00:03:34,973
+Em média, a rede avisa 18 amostras antes.
+
+48
+00:03:34,973 --> 00:03:39,954
+No superaquecimento, com vibração e temperatura subindo juntas,
+
+49
+00:03:39,954 --> 00:03:46,358
+a regra de segurança não olha para isso, e a rede pegou todos os casos simulados.
+
+50
+00:03:46,358 --> 00:03:53,079
+No obstáculo ela deixou passar 28 por cento, que a regra pega por ser um limite fixo.
+
+51
+00:03:53,079 --> 00:03:56,241
+Por isso a ideia é somar a rede à regra.
+
+52
+00:03:56,941 --> 00:03:57,760
+Resumindo:
+
+53
+00:03:57,760 --> 00:03:59,807
+usamos um MLP de verdade,
+
+54
+00:03:59,807 --> 00:04:06,113
+mantivemos o MLP fora do score e mostramos com número que o gargalo é o dado.
+
+55
+00:04:06,113 --> 00:04:11,599
+O próximo passo é juntar telemetria suficiente para treinar a LSTM.
+
+56
+00:04:11,599 --> 00:04:12,336
+Obrigado.

@@ -1,0 +1,35 @@
+<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'><title>Slide 2</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#020617;color:#F8FAFC;
+ font-family:'Segoe UI',system-ui,sans-serif}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 120px}
+.topo{position:absolute;left:120px;top:56px;font-size:24px;color:#94A3B8;letter-spacing:.02em}
+.base{position:absolute;left:120px;bottom:44px;right:120px;font-size:22px;color:#94A3B8;
+ display:flex;justify-content:space-between}
+h1{font-size:92px;line-height:1.04;font-weight:700;letter-spacing:-.02em}
+h2{font-size:68px;line-height:1.08;font-weight:700;letter-spacing:-.015em}
+.azul{color:#3B82F6}.ambar{color:#FBBF24}.verm{color:#F87171}.verde{color:#34D399}
+.cinza{color:#94A3B8}
+.linha{display:grid;grid-template-columns:230px 1fr;gap:48px;padding:30px 0;
+ border-top:1px solid #1E293B;align-items:baseline}
+.linha:last-child{border-bottom:1px solid #1E293B}
+.linha .k{font-size:34px;font-weight:700;color:#3B82F6}
+.linha .v{font-size:36px;line-height:1.3}
+.linha .v small{display:block;font-size:27px;color:#94A3B8;margin-top:6px}
+.aviso{display:inline-block;border:2px solid #FBBF24;color:#FBBF24;padding:6px 18px;
+ border-radius:4px;font-size:26px;font-weight:600}
+</style></head><body>
+<div class='slide'>
+ <div class='topo'>O que foi desenvolvido</div>
+ <h2 style='margin-top:96px;margin-bottom:56px'>Um MLP de verdade. A LSTM ficou no papel.</h2>
+ <div>
+  <div class='linha'><div class='k'>Sprint 1</div><div class='v'>Proposta: MLP para o perfil da apólice e LSTM para a telemetria
+    <small class='ambar' style='color:#FBBF24'>LSTM não implementada: a base não tem série temporal por máquina</small></div></div>
+  <div class='linha'><div class='k'>Sprint 2</div><div class='v'>MLP em Keras, camadas de 32 e 16 neurônios, dropout
+    <small>1.076 parâmetros, Early Stopping</small></div></div>
+  <div class='linha'><div class='k'>Sprint 3</div><div class='v'>Regularização, parada antecipada e peso por classe
+    <small>Único modelo do projeto a acertar um caso crítico, ao custo de perder a classe Alto</small></div></div>
+  <div class='linha'><div class='k'>Sprint 4</div><div class='v'>Base refeita da SUSEP; MLP na validação cruzada com outros cinco modelos
+    <small>5 folds x 10 repetições, só variáveis conhecidas na contratação</small></div></div>
+ </div>
+<div class='base'><span>Challenge FIAP e Sompo, Grupo T1, Redes Neurais & Deep Learning</span></div></div></body></html>
