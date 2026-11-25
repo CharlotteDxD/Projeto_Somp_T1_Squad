@@ -1,0 +1,74 @@
+<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'><title>Slide 3</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#020617;color:#F8FAFC;
+ font-family:'Segoe UI',system-ui,sans-serif}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 120px}
+.topo{position:absolute;left:120px;top:56px;font-size:24px;color:#94A3B8;letter-spacing:.02em}
+.base{position:absolute;left:120px;bottom:44px;right:120px;font-size:22px;color:#94A3B8;
+ display:flex;justify-content:space-between}
+h1{font-size:92px;line-height:1.04;font-weight:700;letter-spacing:-.02em}
+h2{font-size:68px;line-height:1.08;font-weight:700;letter-spacing:-.015em}
+.azul{color:#3B82F6}.ambar{color:#FBBF24}.verm{color:#F87171}.verde{color:#34D399}
+.cinza{color:#94A3B8}
+.linha{display:grid;grid-template-columns:230px 1fr;gap:48px;padding:30px 0;
+ border-top:1px solid #1E293B;align-items:baseline}
+.linha:last-child{border-bottom:1px solid #1E293B}
+.linha .k{font-size:34px;font-weight:700;color:#3B82F6}
+.linha .v{font-size:36px;line-height:1.3}
+.linha .v small{display:block;font-size:27px;color:#94A3B8;margin-top:6px}
+.aviso{display:inline-block;border:2px solid #FBBF24;color:#FBBF24;padding:6px 18px;
+ border-radius:4px;font-size:26px;font-weight:600}
+</style></head><body>
+<div class='slide'>
+ <div class='topo'>Onde o modelo foi usado</div>
+ <h2 style='margin-top:96px;margin-bottom:40px'>O MLP roda ao lado do score e não decide nada.</h2>
+ <div style='margin-left:-0px'>
+<svg width='1680' height='560' viewBox='0 0 1680 560' xmlns='http://www.w3.org/2000/svg'
+ font-family="Segoe UI, sans-serif">
+ <defs><marker id='a' markerWidth='12' markerHeight='12' refX='10' refY='6' orient='auto'>
+  <path d='M0,0 L12,6 L0,12 z' fill='#94A3B8'/></marker>
+  <marker id='b' markerWidth='12' markerHeight='12' refX='10' refY='6' orient='auto'>
+  <path d='M0,0 L12,6 L0,12 z' fill='#FBBF24'/></marker></defs>
+ <g fill='none' stroke='#475569' stroke-width='2'>
+  <rect x='0' y='40' width='330' height='130' rx='6'/>
+  <rect x='0' y='210' width='330' height='130' rx='6'/>
+  <rect x='480' y='60' width='450' height='260' rx='6' stroke='#3B82F6' stroke-width='4'/>
+  <rect x='1080' y='110' width='260' height='160' rx='6'/>
+  <rect x='1470' y='60' width='210' height='120' rx='6'/>
+  <rect x='1470' y='210' width='210' height='120' rx='6'/>
+ </g>
+ <g fill='#F8FAFC' font-size='30'>
+  <text x='24' y='94'>Apólice</text><text x='24' y='136' font-size='24' fill='#94A3B8'>base SUSEP</text>
+  <text x='24' y='264'>Telemetria</text><text x='24' y='306' font-size='24' fill='#94A3B8'>ESP32, 5 sensores</text>
+  <text x='506' y='116' font-size='36' font-weight='700'>Motor de regras</text>
+  <text x='506' y='164' font-size='26' fill='#94A3B8'>perfil da apólice (lento)</text>
+  <text x='506' y='204' font-size='26' fill='#94A3B8'>x exposição em campo (rápido)</text>
+  <text x='506' y='270' font-size='26' fill='#3B82F6'>em produção, auditável</text>
+  <text x='1104' y='176' font-size='36' font-weight='700'>Score</text>
+  <text x='1104' y='222' font-size='26' fill='#94A3B8'>0 a 100</text>
+  <text x='1494' y='112'>Portal da</text><text x='1494' y='150'>seguradora</text>
+  <text x='1494' y='262'>Portal do</text><text x='1494' y='300'>produtor</text>
+ </g>
+ <g stroke='#94A3B8' stroke-width='3' fill='none' marker-end='url(#a)'>
+  <path d='M330 105 L480 150'/><path d='M330 275 L480 230'/><path d='M930 190 L1080 190'/>
+  <path d='M1340 170 L1470 120'/><path d='M1340 210 L1470 260'/>
+ </g>
+ <g>
+  <rect x='480' y='400' width='450' height='120' rx='6' fill='none' stroke='#FBBF24' stroke-width='3'
+   stroke-dasharray='12 8'/>
+  <text x='506' y='452' font-size='34' font-weight='700' fill='#FBBF24'>MLP (32, 16)</text>
+  <text x='506' y='494' font-size='26' fill='#94A3B8'>experimento isolado, não decide</text>
+  <path d='M330 320 C 400 430, 420 450, 480 455' stroke='#FBBF24' stroke-width='3' fill='none'
+   stroke-dasharray='10 8' marker-end='url(#b)'/>
+  <path d='M930 460 L1150 460' stroke='#FBBF24' stroke-width='3' fill='none' stroke-dasharray='10 8'
+   marker-end='url(#b)'/>
+  <text x='1170' y='452' font-size='30' fill='#F8FAFC'>aba de comparação no app</text>
+  <text x='1170' y='492' font-size='24' fill='#94A3B8'>ao lado do score de regras</text>
+ </g>
+ <g>
+  <text x='1040' y='334' font-size='26' fill='#F87171'>regra de segurança por cima:</text>
+  <text x='1040' y='368' font-size='26' fill='#F87171'>inclinação &gt; 25° ou obstáculo &lt; 35 cm</text>
+  <text x='1040' y='402' font-size='26' fill='#F87171'>força o vermelho</text>
+ </g>
+</svg></div>
+<div class='base'><span>Challenge FIAP e Sompo, Grupo T1, Redes Neurais & Deep Learning</span></div></div></body></html>

@@ -1,0 +1,22 @@
+{
+  "limite_erro": 0.11192610335160123,
+  "alarme_falso_sequencia_normal": 0.03333333333333333,
+  "eventos": {
+    "rampa": {
+      "detectados_pela_rede": 1.0,
+      "disparados_pela_regra": 0.925,
+      "antecedencia_media_amostras": 18.54054054054054
+    },
+    "obstaculo": {
+      "detectados_pela_rede": 0.725,
+      "disparados_pela_regra": 1.0,
+      "antecedencia_media_amostras": 15.0
+    },
+    "superaquecimento": {
+      "detectados_pela_rede": 1.0,
+      "disparados_pela_regra": 0.0,
+      "antecedencia_media_amostras": null
+    }
+  },
+  "roc_auc_sequencia": 0.9752777777777778
+}

@@ -1,0 +1,33 @@
+<!doctype html><html lang='pt-BR'><head><meta charset='utf-8'><title>Slide 5</title><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#020617;color:#F8FAFC;
+ font-family:'Segoe UI',system-ui,sans-serif}
+.slide{position:relative;width:1920px;height:1080px;padding:84px 120px}
+.topo{position:absolute;left:120px;top:56px;font-size:24px;color:#94A3B8;letter-spacing:.02em}
+.base{position:absolute;left:120px;bottom:44px;right:120px;font-size:22px;color:#94A3B8;
+ display:flex;justify-content:space-between}
+h1{font-size:92px;line-height:1.04;font-weight:700;letter-spacing:-.02em}
+h2{font-size:68px;line-height:1.08;font-weight:700;letter-spacing:-.015em}
+.azul{color:#3B82F6}.ambar{color:#FBBF24}.verm{color:#F87171}.verde{color:#34D399}
+.cinza{color:#94A3B8}
+.linha{display:grid;grid-template-columns:230px 1fr;gap:48px;padding:30px 0;
+ border-top:1px solid #1E293B;align-items:baseline}
+.linha:last-child{border-bottom:1px solid #1E293B}
+.linha .k{font-size:34px;font-weight:700;color:#3B82F6}
+.linha .v{font-size:36px;line-height:1.3}
+.linha .v small{display:block;font-size:27px;color:#94A3B8;margin-top:6px}
+.aviso{display:inline-block;border:2px solid #FBBF24;color:#FBBF24;padding:6px 18px;
+ border-radius:4px;font-size:26px;font-weight:600}
+</style></head><body>
+<div class='slide'>
+ <div class='topo'>Como a rede pode evoluir</div>
+ <h2 style='margin-top:96px;margin-bottom:56px'>Três usos, e todos precisam de dado novo.</h2>
+ <div>
+  <div class='linha'><div class='k'>Telemetria</div><div class='v'>LSTM ou autoencoder sobre as leituras do ESP32: aprende a operação normal e avisa o desvio, antes do limite da regra
+    <small>Precisa de: histórico de leituras por máquina</small></div></div>
+  <div class='linha'><div class='k'>Pesos</div><div class='v'>MLP que aprende os pesos da camada de exposição do score, hoje definidos por julgamento de especialista
+    <small>Precisa de: pares de leitura de campo e sinistro</small></div></div>
+  <div class='linha'><div class='k'>Imagens</div><div class='v'>CNN pré-treinada (transfer learning) em imagem de drone ou satélite: água, erosão, declive
+    <small>Precisa de: imagens do terreno das propriedades seguradas</small></div></div>
+ </div>
+<div class='base'><span>Challenge FIAP e Sompo, Grupo T1, Redes Neurais & Deep Learning</span></div></div></body></html>
