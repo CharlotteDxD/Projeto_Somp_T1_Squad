@@ -4,6 +4,10 @@
 
 Esta pasta foi montada à parte para não mexer no projeto das sprints anteriores. O motor de score é uma cópia sem alteração do `core_fusao.py` da Sprint 4 (mesmo hash do arquivo original), e a base é a `base_sompo_limpa.csv` de 150 apólices da SUSEP.
 
+Aplicativo no ar: https://projetosompt1squad-w8ygimtdq9cfb3mysb7d6x.streamlit.app
+
+Se o app estiver dormindo por falta de acesso, o Streamlit Cloud mostra um botão para acordá-lo e ele volta em cerca de um minuto.
+
 ## Como rodar
 
 ```powershell
@@ -45,11 +49,9 @@ tests/              24 testes (pytest)
 apresentacao/       slides finais (.pptx) e capturas do aplicativo
 ```
 
-## Publicar no Streamlit Community Cloud
+## Publicação no Streamlit Community Cloud
 
-1. Em share.streamlit.io, criar um app apontando para este repositório, branch `main`.
-2. Arquivo principal: `Entregavel4_ML_Aplicacao/app.py`.
-3. O arquivo `requirements.txt` desta pasta já tem as versões fixas. Não há segredos nem variáveis de ambiente.
+O app foi publicado a partir da branch `main`, com arquivo principal `Entregavel4_ML_Aplicacao/app.py`. O `requirements.txt` desta pasta tem as versões fixas e não há segredos nem variáveis de ambiente.
 
 O aplicativo não grava nenhum dado digitado.
 
